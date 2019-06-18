@@ -1,0 +1,25 @@
+#!/usr/local/bin/node
+
+function square(n) {
+  return n * n;
+}
+
+let altSquare = (n) => {
+  return n * n;
+}
+
+console.log(square(4));
+console.log(altSquare(4));
+
+function emailParts(email) {
+  
+  return email.toLowerCase().split("@");
+}
+
+let parts = emailParts("USERNAME@EXAMPLE.COM");
+console.log(parts);
+
+let a = [8, 17, 42, 99];
+a.forEach(function(integer) {
+  console.log(integer);
+});
