@@ -1,8 +1,9 @@
 let Phrase = require("ganglians-palindrome");
 
-function palindromeTester() {
-  let string = prompt("Please enter a string for palindrome testing:");
-  let phrase = new Phrase(string);
+function palindromeTester(event) {
+  event.preventDefault();
+  
+  let phrase = new Phrase(event.target.phrase.value);
   let palindromeResult = document.querySelector("#palindromeResult");
 
   if(phrase.palindrome()) {
@@ -14,8 +15,8 @@ function palindromeTester() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  let button = document.querySelector("#palindromeTester");
-  button.addEventListener("click", function() {
-    palindromeTester();
+  let tester = document.querySelector("#palindromeTester");
+  tester.addEventListener("submit", function(event) {
+    palindromeTester(event);
   });
 });

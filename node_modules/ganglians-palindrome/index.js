@@ -58,7 +58,12 @@ function Phrase(content) {
   this.palindrome = function palindrome() {
     
     // return this.processedContent() === reverse(this.processedContent());
-    return this.processedContent() === this.processedContent().reverse();
+    if(this.processedContent()) {
+      return this.processedContent() === this.processedContent().reverse();
+    }
+    else {
+      return false;
+    }
   }
   
   // Makes the phrase LOUDER

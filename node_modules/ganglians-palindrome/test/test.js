@@ -26,6 +26,12 @@ describe("Phrase", function() {
       
       assert.strictEqual(punctuatedPalindrome.letters(), "MadamImAdam");
     });
+
+    it("should return false for an empty string", function() {
+      let emptyCase = new Phrase("");
+
+      assert(!emptyCase.palindrome());
+    });
   });
   
   describe("#letters", function() {
